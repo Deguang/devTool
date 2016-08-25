@@ -1,3 +1,4 @@
+console.log('[INFO]: pre-commit install begin...')
 var fs = require('fs'),
     exec = require('child_process').exec;
 
