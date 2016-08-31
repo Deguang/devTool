@@ -5,7 +5,7 @@ var fs = require('fs'),
 if(!fs.existsSync('.git/hooks/')) {
     console.log('[INFO]: pre-commit installed failed.');
     console.log('Please run this cmd on the root of project.');
-    return false;
+    process.exit(1);
 }
 var download = exec('curl https://raw.githubusercontent.com/Deguang/devTool/master/pre-commit', (error, stdout, stderr) => {
     if (error) {
