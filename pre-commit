@@ -64,7 +64,7 @@ var check = exec('git diff-index --cached --name-only HEAD', (error, stdout, std
         files.then(
             function(value){
                 console.log('------Fedge code check done------');
-                console.log(value ? 'Commit failed! Please solve those errors before next commit.' : 'Commit success!');
+                console.log(value ? 'Commit failed! Please solve those errors before next commit.\n [ This option bypasses the pre-commit and commit-msg hooks: git commit --no-verify -m <msg>. !! BE CAREFUL OF THIS OPTION !! ]' : 'Commit success!');
                 process.exit(value);
             }, function(error){
                 console.log(error);
