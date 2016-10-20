@@ -14,7 +14,7 @@ var check = exec('git diff-index --cached --name-only HEAD', (error, stdout, std
         var files = new Promise(function(resolve,reject){
             var processCode = 0;
             stdout.split('\n').filter((i) => {
-                if(i == '' && fs.existsSync(i)) {
+                if(i == '' && !fs.existsSync(i)) {
                     return ;
                 }
                 // 冲突判断
