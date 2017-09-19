@@ -59,7 +59,7 @@ var check = exec('git diff-index --cached --name-only HEAD', (error, stdout, std
 
             /* ----------------- 不得引入 elementUi ----------------- */
             fs.readFileSync(i, 'utf8').split('\n').forEach((elem, index) => {
-                if(elem.indexOf('element-ui)') != '-1') {
+                if(elem.indexOf('Vue.use(elementUi)') != '-1') {
                     console.error('[Error] ' + i + ' has import elementUi, fobidden commit!');
                     console.error('        line num: ' + (index++));
                 }
