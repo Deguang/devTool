@@ -12,6 +12,13 @@ More info about git hook, please see this document: [Git Hooks](https://git-scm.
 └── pre-commit-installer.js     // the pre-commit hook installer
 ```
 
+
+#### support check
+
+* Merge conflicts, forbidden commit;
+* scss compile error, forbidden commit;
+* use elementUi, forbidden commit;
+
 #### installation
 This command depens on nodeJs, check your node environment:
 
